@@ -12,14 +12,17 @@
 		AA0000200000000000000001 /* MediaParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000210000000000000001 /* MediaParserProtocol.swift */; };
 		AA0000220000000000000001 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000230000000000000001 /* NetworkServiceProtocol.swift */; };
 		AA0000240000000000000001 /* DownloadServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000250000000000000001 /* DownloadServiceProtocol.swift */; };
+		AA0000440000000000000001 /* MetadataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000450000000000000001 /* MetadataServiceProtocol.swift */; };
 		AA0000260000000000000001 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000270000000000000001 /* MediaItem.swift */; };
 		AA0000280000000000000001 /* ParserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000290000000000000001 /* ParserResult.swift */; };
 		AA00002A0000000000000001 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00002B0000000000000001 /* AppError.swift */; };
+		AA0000460000000000000001 /* AudioFileMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000470000000000000001 /* AudioFileMetadata.swift */; };
 		AA00002C0000000000000001 /* GenericAudioParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00002D0000000000000001 /* GenericAudioParser.swift */; };
 		AA00002E0000000000000001 /* JSONMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00002F0000000000000001 /* JSONMetadataParser.swift */; };
 		AA0000300000000000000001 /* ParserRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000310000000000000001 /* ParserRegistry.swift */; };
 		AA0000320000000000000001 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000330000000000000001 /* NetworkService.swift */; };
 		AA0000340000000000000001 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000350000000000000001 /* DownloadManager.swift */; };
+		AA0000480000000000000001 /* MetadataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000490000000000000001 /* MetadataService.swift */; };
 		AA0000360000000000000001 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000370000000000000001 /* MainViewModel.swift */; };
 		AA0000380000000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000390000000000000001 /* ContentView.swift */; };
 		AA00003A0000000000000001 /* URLInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00003B0000000000000001 /* URLInputView.swift */; };
@@ -27,6 +30,13 @@
 		AA00003E0000000000000001 /* MediaItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00003F0000000000000001 /* MediaItemRow.swift */; };
 		AA0000400000000000000001 /* DownloadControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000410000000000000001 /* DownloadControlsView.swift */; };
 		AA0000420000000000000001 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000430000000000000001 /* ErrorView.swift */; };
+		AA00004A0000000000000001 /* MetadataEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00004B0000000000000001 /* MetadataEditorViewModel.swift */; };
+		AA00004C0000000000000001 /* MetadataEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00004D0000000000000001 /* MetadataEditorView.swift */; };
+		AA00004E0000000000000001 /* FileDropZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00004F0000000000000001 /* FileDropZone.swift */; };
+		AA0000500000000000000001 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000510000000000000001 /* ArtworkView.swift */; };
+		AA0000520000000000000001 /* MetadataFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000530000000000000001 /* MetadataFormView.swift */; };
+		AA0000540000000000000001 /* TechnicalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000550000000000000001 /* TechnicalInfoView.swift */; };
+		AA0000560000000000000002 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000570000000000000002 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +48,17 @@
 		AA0000210000000000000001 /* MediaParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaParserProtocol.swift; sourceTree = "<group>"; };
 		AA0000230000000000000001 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		AA0000250000000000000001 /* DownloadServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadServiceProtocol.swift; sourceTree = "<group>"; };
+		AA0000450000000000000001 /* MetadataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataServiceProtocol.swift; sourceTree = "<group>"; };
 		AA0000270000000000000001 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		AA0000290000000000000001 /* ParserResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserResult.swift; sourceTree = "<group>"; };
 		AA00002B0000000000000001 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		AA0000470000000000000001 /* AudioFileMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileMetadata.swift; sourceTree = "<group>"; };
 		AA00002D0000000000000001 /* GenericAudioParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAudioParser.swift; sourceTree = "<group>"; };
 		AA00002F0000000000000001 /* JSONMetadataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMetadataParser.swift; sourceTree = "<group>"; };
 		AA0000310000000000000001 /* ParserRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserRegistry.swift; sourceTree = "<group>"; };
 		AA0000330000000000000001 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AA0000350000000000000001 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		AA0000490000000000000001 /* MetadataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataService.swift; sourceTree = "<group>"; };
 		AA0000370000000000000001 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		AA0000390000000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA00003B0000000000000001 /* URLInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLInputView.swift; sourceTree = "<group>"; };
@@ -53,6 +66,13 @@
 		AA00003F0000000000000001 /* MediaItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemRow.swift; sourceTree = "<group>"; };
 		AA0000410000000000000001 /* DownloadControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadControlsView.swift; sourceTree = "<group>"; };
 		AA0000430000000000000001 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		AA00004B0000000000000001 /* MetadataEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataEditorViewModel.swift; sourceTree = "<group>"; };
+		AA00004D0000000000000001 /* MetadataEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataEditorView.swift; sourceTree = "<group>"; };
+		AA00004F0000000000000001 /* FileDropZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDropZone.swift; sourceTree = "<group>"; };
+		AA0000510000000000000001 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
+		AA0000530000000000000001 /* MetadataFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataFormView.swift; sourceTree = "<group>"; };
+		AA0000550000000000000001 /* TechnicalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalInfoView.swift; sourceTree = "<group>"; };
+		AA0000570000000000000002 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +131,7 @@
 				AA0000210000000000000001 /* MediaParserProtocol.swift */,
 				AA0000230000000000000001 /* NetworkServiceProtocol.swift */,
 				AA0000250000000000000001 /* DownloadServiceProtocol.swift */,
+				AA0000450000000000000001 /* MetadataServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -121,6 +142,7 @@
 				AA0000270000000000000001 /* MediaItem.swift */,
 				AA0000290000000000000001 /* ParserResult.swift */,
 				AA00002B0000000000000001 /* AppError.swift */,
+				AA0000470000000000000001 /* AudioFileMetadata.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +171,7 @@
 			children = (
 				AA0000330000000000000001 /* NetworkService.swift */,
 				AA0000350000000000000001 /* DownloadManager.swift */,
+				AA0000490000000000000001 /* MetadataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,12 +188,14 @@
 		AA0000130000000000000001 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA0000570000000000000002 /* MainTabView.swift */,
 				AA0000390000000000000001 /* ContentView.swift */,
 				AA00003B0000000000000001 /* URLInputView.swift */,
 				AA00003D0000000000000001 /* MediaListView.swift */,
 				AA00003F0000000000000001 /* MediaItemRow.swift */,
 				AA0000410000000000000001 /* DownloadControlsView.swift */,
 				AA0000430000000000000001 /* ErrorView.swift */,
+				AA0000560000000000000001 /* MetadataEditor */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,8 +204,21 @@
 			isa = PBXGroup;
 			children = (
 				AA0000370000000000000001 /* MainViewModel.swift */,
+				AA00004B0000000000000001 /* MetadataEditorViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA0000560000000000000001 /* MetadataEditor */ = {
+			isa = PBXGroup;
+			children = (
+				AA00004D0000000000000001 /* MetadataEditorView.swift */,
+				AA00004F0000000000000001 /* FileDropZone.swift */,
+				AA0000510000000000000001 /* ArtworkView.swift */,
+				AA0000530000000000000001 /* MetadataFormView.swift */,
+				AA0000550000000000000001 /* TechnicalInfoView.swift */,
+			);
+			path = MetadataEditor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,14 +294,17 @@
 				AA0000200000000000000001 /* MediaParserProtocol.swift in Sources */,
 				AA0000220000000000000001 /* NetworkServiceProtocol.swift in Sources */,
 				AA0000240000000000000001 /* DownloadServiceProtocol.swift in Sources */,
+				AA0000440000000000000001 /* MetadataServiceProtocol.swift in Sources */,
 				AA0000260000000000000001 /* MediaItem.swift in Sources */,
 				AA0000280000000000000001 /* ParserResult.swift in Sources */,
 				AA00002A0000000000000001 /* AppError.swift in Sources */,
+				AA0000460000000000000001 /* AudioFileMetadata.swift in Sources */,
 				AA00002C0000000000000001 /* GenericAudioParser.swift in Sources */,
 				AA00002E0000000000000001 /* JSONMetadataParser.swift in Sources */,
 				AA0000300000000000000001 /* ParserRegistry.swift in Sources */,
 				AA0000320000000000000001 /* NetworkService.swift in Sources */,
 				AA0000340000000000000001 /* DownloadManager.swift in Sources */,
+				AA0000480000000000000001 /* MetadataService.swift in Sources */,
 				AA0000360000000000000001 /* MainViewModel.swift in Sources */,
 				AA0000380000000000000001 /* ContentView.swift in Sources */,
 				AA00003A0000000000000001 /* URLInputView.swift in Sources */,
@@ -271,6 +312,13 @@
 				AA00003E0000000000000001 /* MediaItemRow.swift in Sources */,
 				AA0000400000000000000001 /* DownloadControlsView.swift in Sources */,
 				AA0000420000000000000001 /* ErrorView.swift in Sources */,
+				AA00004A0000000000000001 /* MetadataEditorViewModel.swift in Sources */,
+				AA00004C0000000000000001 /* MetadataEditorView.swift in Sources */,
+				AA00004E0000000000000001 /* FileDropZone.swift in Sources */,
+				AA0000500000000000000001 /* ArtworkView.swift in Sources */,
+				AA0000520000000000000001 /* MetadataFormView.swift in Sources */,
+				AA0000540000000000000001 /* TechnicalInfoView.swift in Sources */,
+				AA0000560000000000000002 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AudioGrabber/AudioGrabber.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -430,6 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AudioGrabber/AudioGrabber.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
