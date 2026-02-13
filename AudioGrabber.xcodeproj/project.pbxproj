@@ -37,6 +37,8 @@
 		AA0000520000000000000001 /* MetadataFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000530000000000000001 /* MetadataFormView.swift */; };
 		AA0000540000000000000001 /* TechnicalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000550000000000000001 /* TechnicalInfoView.swift */; };
 		AA0000560000000000000002 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000570000000000000002 /* MainTabView.swift */; };
+		AA0000580000000000000001 /* SwiftTagger in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000590000000000000001 /* SwiftTagger */; };
+		AA00005B0000000000000001 /* SwiftTaggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00005C0000000000000001 /* SwiftTaggerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,7 @@
 		AA0000530000000000000001 /* MetadataFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataFormView.swift; sourceTree = "<group>"; };
 		AA0000550000000000000001 /* TechnicalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalInfoView.swift; sourceTree = "<group>"; };
 		AA0000570000000000000002 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AA00005C0000000000000001 /* SwiftTaggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTaggerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0000580000000000000001 /* SwiftTagger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +176,7 @@
 				AA0000330000000000000001 /* NetworkService.swift */,
 				AA0000350000000000000001 /* DownloadManager.swift */,
 				AA0000490000000000000001 /* MetadataService.swift */,
+				AA00005C0000000000000001 /* SwiftTaggerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -237,6 +242,9 @@
 			dependencies = (
 			);
 			name = AudioGrabber;
+			packageProductDependencies = (
+				AA0000590000000000000001 /* SwiftTagger */,
+			);
 			productName = AudioGrabber;
 			productReference = AA0000050000000000000001 /* AudioGrabber.app */;
 			productType = "com.apple.product-type.application";
@@ -265,6 +273,9 @@
 				Base,
 			);
 			mainGroup = AA0000090000000000000001;
+			packageReferences = (
+				AA00005A0000000000000001 /* XCRemoteSwiftPackageReference "SwiftTagger" */,
+			);
 			productRefGroup = AA00000B0000000000000001 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,6 +330,7 @@
 				AA0000520000000000000001 /* MetadataFormView.swift in Sources */,
 				AA0000540000000000000001 /* TechnicalInfoView.swift in Sources */,
 				AA0000560000000000000002 /* MainTabView.swift in Sources */,
+				AA00005B0000000000000001 /* SwiftTaggerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +537,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA00005A0000000000000001 /* XCRemoteSwiftPackageReference "SwiftTagger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NCrusher74/SwiftTagger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA0000590000000000000001 /* SwiftTagger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA00005A0000000000000001 /* XCRemoteSwiftPackageReference "SwiftTagger" */;
+			productName = SwiftTagger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA0000190000000000000001 /* Project object */;
 }

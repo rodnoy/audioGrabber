@@ -18,7 +18,7 @@ struct MainTabView: View {
     private let metadataService: MetadataServiceProtocol
     
     init() {
-        self.metadataService = MetadataService()
+        self.metadataService = SwiftTaggerService()
     }
     
     var body: some View {

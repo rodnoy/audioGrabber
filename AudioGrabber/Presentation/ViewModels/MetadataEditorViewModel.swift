@@ -109,7 +109,18 @@ final class MetadataEditorViewModel {
         
         // Show NSSavePanel to choose where to save the modified file
         let savePanel = NSSavePanel()
-        savePanel.allowedContentTypes = [.mpeg4Audio]
+        
+        // Determine allowed content types based on the original file extension
+        let fileExtension = url.pathExtension.lowercased()
+        if fileExtension == "mp3" {
+            savePanel.allowedContentTypes = [.mp3]
+        } else if fileExtension == "m4a" {
+            savePanel.allowedContentTypes = [.mpeg4Audio]
+        } else {
+            // Default to audio types
+            savePanel.allowedContentTypes = [.audio]
+        }
+        
         savePanel.nameFieldStringValue = url.lastPathComponent
         savePanel.message = "Choose where to save the modified file"
         savePanel.canCreateDirectories = true
