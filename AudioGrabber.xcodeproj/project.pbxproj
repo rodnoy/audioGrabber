@@ -39,6 +39,15 @@
 		AA0000560000000000000002 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000570000000000000002 /* MainTabView.swift */; };
 		AA0000580000000000000001 /* SwiftTagger in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000590000000000000001 /* SwiftTagger */; };
 		AA00005B0000000000000001 /* SwiftTaggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00005C0000000000000001 /* SwiftTaggerService.swift */; };
+		AA00005D0000000000000001 /* RenameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00005E0000000000000001 /* RenameItem.swift */; };
+		AA00005F0000000000000001 /* FileRenamerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000600000000000000001 /* FileRenamerService.swift */; };
+		AA0000610000000000000001 /* FileRenamerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000620000000000000001 /* FileRenamerViewModel.swift */; };
+		AA0000630000000000000001 /* FileRenamerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000640000000000000001 /* FileRenamerView.swift */; };
+		AA0000650000000000000001 /* FolderDropZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000660000000000000001 /* FolderDropZoneView.swift */; };
+		AA0000670000000000000001 /* RenameListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000680000000000000001 /* RenameListHeaderView.swift */; };
+		AA0000690000000000000001 /* RenameFileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00006A0000000000000001 /* RenameFileListView.swift */; };
+		AA00006B0000000000000001 /* RenameFileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00006C0000000000000001 /* RenameFileRow.swift */; };
+		AA00006D0000000000000001 /* RenameControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00006E0000000000000001 /* RenameControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +85,15 @@
 		AA0000550000000000000001 /* TechnicalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalInfoView.swift; sourceTree = "<group>"; };
 		AA0000570000000000000002 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		AA00005C0000000000000001 /* SwiftTaggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTaggerService.swift; sourceTree = "<group>"; };
+		AA00005E0000000000000001 /* RenameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameItem.swift; sourceTree = "<group>"; };
+		AA0000600000000000000001 /* FileRenamerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRenamerService.swift; sourceTree = "<group>"; };
+		AA0000620000000000000001 /* FileRenamerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRenamerViewModel.swift; sourceTree = "<group>"; };
+		AA0000640000000000000001 /* FileRenamerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRenamerView.swift; sourceTree = "<group>"; };
+		AA0000660000000000000001 /* FolderDropZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderDropZoneView.swift; sourceTree = "<group>"; };
+		AA0000680000000000000001 /* RenameListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameListHeaderView.swift; sourceTree = "<group>"; };
+		AA00006A0000000000000001 /* RenameFileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameFileListView.swift; sourceTree = "<group>"; };
+		AA00006C0000000000000001 /* RenameFileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameFileRow.swift; sourceTree = "<group>"; };
+		AA00006E0000000000000001 /* RenameControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +165,7 @@
 				AA0000290000000000000001 /* ParserResult.swift */,
 				AA00002B0000000000000001 /* AppError.swift */,
 				AA0000470000000000000001 /* AudioFileMetadata.swift */,
+				AA00005E0000000000000001 /* RenameItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +196,7 @@
 				AA0000350000000000000001 /* DownloadManager.swift */,
 				AA0000490000000000000001 /* MetadataService.swift */,
 				AA00005C0000000000000001 /* SwiftTaggerService.swift */,
+				AA0000600000000000000001 /* FileRenamerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,6 +221,7 @@
 				AA0000410000000000000001 /* DownloadControlsView.swift */,
 				AA0000430000000000000001 /* ErrorView.swift */,
 				AA0000560000000000000001 /* MetadataEditor */,
+				AA00006F0000000000000001 /* FileRenamer */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +231,7 @@
 			children = (
 				AA0000370000000000000001 /* MainViewModel.swift */,
 				AA00004B0000000000000001 /* MetadataEditorViewModel.swift */,
+				AA0000620000000000000001 /* FileRenamerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -224,6 +246,19 @@
 				AA0000550000000000000001 /* TechnicalInfoView.swift */,
 			);
 			path = MetadataEditor;
+			sourceTree = "<group>";
+		};
+		AA00006F0000000000000001 /* FileRenamer */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000640000000000000001 /* FileRenamerView.swift */,
+				AA0000660000000000000001 /* FolderDropZoneView.swift */,
+				AA0000680000000000000001 /* RenameListHeaderView.swift */,
+				AA00006A0000000000000001 /* RenameFileListView.swift */,
+				AA00006C0000000000000001 /* RenameFileRow.swift */,
+				AA00006E0000000000000001 /* RenameControlsView.swift */,
+			);
+			path = FileRenamer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +366,15 @@
 				AA0000540000000000000001 /* TechnicalInfoView.swift in Sources */,
 				AA0000560000000000000002 /* MainTabView.swift in Sources */,
 				AA00005B0000000000000001 /* SwiftTaggerService.swift in Sources */,
+				AA00005D0000000000000001 /* RenameItem.swift in Sources */,
+				AA00005F0000000000000001 /* FileRenamerService.swift in Sources */,
+				AA0000610000000000000001 /* FileRenamerViewModel.swift in Sources */,
+				AA0000630000000000000001 /* FileRenamerView.swift in Sources */,
+				AA0000650000000000000001 /* FolderDropZoneView.swift in Sources */,
+				AA0000670000000000000001 /* RenameListHeaderView.swift in Sources */,
+				AA0000690000000000000001 /* RenameFileListView.swift in Sources */,
+				AA00006B0000000000000001 /* RenameFileRow.swift in Sources */,
+				AA00006D0000000000000001 /* RenameControlsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

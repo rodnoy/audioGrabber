@@ -12,6 +12,7 @@ struct MainTabView: View {
     enum Tab {
         case downloader
         case metadataEditor
+        case fileRenamer
     }
     
     @State private var selectedTab: Tab = .downloader
@@ -36,6 +37,13 @@ struct MainTabView: View {
                     Label("Metadata Editor", systemImage: "tag")
                 }
                 .tag(Tab.metadataEditor)
+            
+            // Tab 3: File Renamer
+            FileRenamerView()
+                .tabItem {
+                    Label("File Renamer", systemImage: "pencil.and.list.clipboard")
+                }
+                .tag(Tab.fileRenamer)
         }
     }
 }
