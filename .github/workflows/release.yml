@@ -1,0 +1,98 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    name: Build Universal macOS App
+    runs-on: macos-15
+
+    env:
+      SCHEME: AudioGrabber
+      PROJECT: AudioGrabber.xcodeproj
+      CONFIGURATION: Release
+      DERIVED_DATA: build/DerivedData
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Xcode
+        run: |
+          ls /Applications/ | grep Xcode || true
+          sudo xcode-select -s /Applications/Xcode_16.2.app/Contents/Developer || \
+          sudo xcode-select -s /Applications/Xcode_16.1.app/Contents/Developer || \
+          sudo xcode-select -s /Applications/Xcode_16.0.app/Contents/Developer || \
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          xcodebuild -version
+
+      - name: Build macOS App (unsigned universal)
+        run: |
+          xcodebuild -project "$PROJECT" \
+            -scheme "$SCHEME" \
+            -configuration "$CONFIGURATION" \
+            -derivedDataPath "$DERIVED_DATA" \
+            ARCHS="arm64 x86_64" \
+            ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Validate universal binary
+        run: |
+          APP_BIN="$DERIVED_DATA/Build/Products/$CONFIGURATION/$SCHEME.app/Contents/MacOS/$SCHEME"
+          test -f "$APP_BIN"
+          lipo -info "$APP_BIN"
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+
+      - name: Create DMG
+        run: |
+          APP_PATH="$DERIVED_DATA/Build/Products/$CONFIGURATION/$SCHEME.app"
+          DMG_NAME="$SCHEME-${{ steps.version.outputs.VERSION }}-universal.dmg"
+
+          mkdir -p dmg_contents
+          cp -R "$APP_PATH" dmg_contents/
+          ln -s /Applications dmg_contents/Applications
+
+          hdiutil create -volname "$SCHEME" \
+            -srcfolder dmg_contents \
+            -ov -format UDZO \
+            "$DMG_NAME"
+
+          echo "DMG_PATH=$DMG_NAME" >> "$GITHUB_ENV"
+          ls -la "$DMG_NAME"
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "AudioGrabber ${{ steps.version.outputs.VERSION }}"
+          body: |
+            ## AudioGrabber ${{ steps.version.outputs.VERSION }}
+
+            Universal macOS build for Apple Silicon and Intel.
+
+            ### Installation
+            1. Download `${{ env.SCHEME }}-${{ steps.version.outputs.VERSION }}-universal.dmg`
+            2. Open DMG
+            3. Drag app to Applications
+
+            ### Note
+            This build is unsigned and not notarized.
+            On first launch, right-click the app and choose Open.
+          files: |
+            ${{ env.DMG_PATH }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
